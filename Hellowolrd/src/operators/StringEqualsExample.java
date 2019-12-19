@@ -29,5 +29,7 @@ public class StringEqualsExample {
 			        	 ((score > 70) ? 'C' : 
 			        		 ((score > 60) ? 'D' : 'F')));
 		System.out.println(grade);
+		
+		System.out.println("hahaha");
 	}
 }
