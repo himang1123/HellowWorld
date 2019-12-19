@@ -31,5 +31,6 @@ public class StringEqualsExample {
 		System.out.println(grade);
 		
 		System.out.println("hahaha");
+		System.out.println("hihihi");
 	}
 }
