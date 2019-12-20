@@ -3,7 +3,6 @@ package conditions;
 public class Rotto {
 	public static void main(String[] args) {
 		int RottoNumber = (int) (Math.random() * 45) + 1;
-
 		switch (RottoNumber) {
 		case 1:
 			System.out.println(" 1 ");
