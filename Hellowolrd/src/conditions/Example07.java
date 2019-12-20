@@ -71,7 +71,7 @@ public class Example07 {
 				if (amt == 0) {
 					break;
 				} else {
-					avg = balance / (double) amt;
+					avg = balance / (double) num[i].length;
 				}
 				System.out.println(" 평균 > " + balance);
 
