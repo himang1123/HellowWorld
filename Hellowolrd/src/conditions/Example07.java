@@ -47,14 +47,6 @@ public class Example07 {
 			System.out.println("선택 > ");
 			menu = scanner.nextInt(); // 사용자가 선택한 값을 읽어와서 기억하겠다.
 			scanner.nextLine(); //
-
-//			for (int i = 0; i < num.length; i++) {
-//				num[i] = 1 + i;
-//				summary += num[i]; 
-//			}
-//			avg = summary / (double)num.length;
-//			System.out.print(avg);
-
 			if (menu == 1) {
 				System.out.println(" 입력 > ");
 
