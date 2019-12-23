@@ -37,11 +37,12 @@ public class ForArrayExample {
 		// 1~6까지 수 중 5가 나올때 까지 출력
 		for (int i = 0; i < 7; i++) {
 			sum = (int) (Math.random() * 6) + 1;
-			System.out.print(sum + " ");
 			if (sum == 5) {
-				 break;
+				break;
 			}
+			System.out.print(sum + "  ");
 		}
+		System.out.print("END ");
 
 	}
 }
