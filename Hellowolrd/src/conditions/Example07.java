@@ -35,7 +35,7 @@ public class Example07 {
 //		System.out.println("프로그램 종료");
 
 		boolean run = true;
-		int balance = 0, menu = 0, amt = 0;
+		int balance = 0, menu = 0, atm = 0, a = 0, num2 = 0, num3 = 0;
 		Scanner scanner = new Scanner(System.in);
 		int[] num = new int[5];
 		double avg = 0;
@@ -47,20 +47,12 @@ public class Example07 {
 			System.out.println("선택 > ");
 			menu = scanner.nextInt(); // 사용자가 선택한 값을 읽어와서 기억하겠다.
 			scanner.nextLine(); //
-
-//			for (int i = 0; i < num.length; i++) {
-//				num[i] = 1 + i;
-//				summary += num[i]; 
-//			}
-//			avg = summary / (double)num.length;
-//			System.out.print(avg);
-
 			if (menu == 1) {
 				System.out.println(" 입력 > ");
 
 				for (int i = 0; i < num.length; i++) {
-					amt = scanner.nextInt();
-					num[i] = amt;
+					atm = scanner.nextInt();
+					num[i] = atm;
 					balance = balance + num[i];
 				}
 
@@ -68,17 +60,25 @@ public class Example07 {
 				System.out.println(" 합계 > " + balance);
 
 			} else if (menu == 3) {
-				if (amt == 0) {
-					break;
-				} else {
-					avg = balance / (double) num[i].length;
-				}
-				System.out.println(" 평균 > " + balance);
-
+				if (balance == 0) {
+					System.out.println(" 합계가 0 입니다. 다시 입력해주세요.");
+					System.out.println("---------------------------");
+					System.out.println("1. 입력  2. 합계  3. 평균  4. 종료");
+					System.out.println("---------------------------");
+					System.out.println("선택 > ");
+					menu = scanner.nextInt();
+					scanner.nextLine();
+				} else
+					for (a = 0; a < num.length; a++) {
+						if (num[a] == 0) {
+							num2 += 1;
+							num3 = num.length - num2;
+						}
+					}
+				System.out.println(" 평균 > " + balance / (double) num3);
 			} else if (menu == 4) {
 				run = false;
 			}
-
 		}
 		System.out.println(" 종료 ");
 	}
