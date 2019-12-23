@@ -1,3 +1,4 @@
+package conditions;
 
 public class GetMaxValue {
 	public static void main(String[] args) {

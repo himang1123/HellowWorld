@@ -1,3 +1,4 @@
+package conditions;
 
 public class ArraycreateByNewExample {
 	public static void main(String[] args) {
