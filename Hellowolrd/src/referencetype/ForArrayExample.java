@@ -39,7 +39,7 @@ public class ForArrayExample {
 			sum = (int) (Math.random() * 6) + 1;
 			System.out.print(sum + " ");
 			if (sum == 5) {
-				break;
+				 break;
 			}
 		}
 
