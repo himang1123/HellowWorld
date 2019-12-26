@@ -31,7 +31,6 @@ public class BankApplication {
 		}
 		System.out.println("프로그램 종료");
 	}
-
 	private static void createAccount() {
 		Account acc = new Account();
 		System.out.println("========");
