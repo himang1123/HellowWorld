@@ -19,24 +19,37 @@ public class BankApplication {
 
 			if (selectNO == 1) {
 				createAccount();
-			} else if (selectNO == 2) {
-				accountList();
-			} else if (selectNO == 3) {
-				deposit();
-			} else if (selectNO == 4) {
-				withraw();
-			} else if (selectNO == 5) {
+//			} else if (selectNO == 2) {
+//				accountList();
+//			} else if (selectNO == 3) {
+//				deposit();
+//			} else if (selectNO == 4) {
+//				withraw();
+//			} else if (selectNO == 5) {
 				run = false;
 			}
 		}
 		System.out.println("프로그램 종료");
 	}
+
 	private static void createAccount() {
 		Account acc = new Account();
+		
 		System.out.println("========");
 		System.out.println("계좌생성");
 		System.out.println("========");
+		System.out.println();
 		String ano = sc.nextLine();
+		acc.setAno(ano);
+		System.out.println("계좌번호 : " + ano);
+		String owner = sc.nextLine();
+		acc.setOwner(owner);
+		System.out.println("계좌주 : " + owner );
+		int balance = sc.nextInt();
+		acc.setBalance(balance);
+		System.out.println("초기입금액 : " + balance);
+		System.out.println("결과 : 계좌가 생성되었습니다.");
+		
 		
 	}
 }
