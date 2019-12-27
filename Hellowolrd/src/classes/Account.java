@@ -10,7 +10,6 @@ public class Account {
 	}
 
 	public Account(String ano, String owner, int balance) {
-		super();
 		this.ano = ano;
 		this.owner = owner;
 		this.balance = balance;
@@ -42,7 +41,7 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [ano=" + ano + ", owner=" + owner + ", balance=" + balance + "]";
+		return "계좌정보 [계좌번호=" + ano + ", 소유자=" + owner + ", 예금잔액=" + balance + "]";
 	}
 
 }
