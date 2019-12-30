@@ -10,19 +10,19 @@ public class BankApplication {
 	public static void main(String[] args) {
 		boolean run = true;
 		while (run) {
-			System.out.println("===========================");
+			System.out.println("========================================");
 			System.out.println("1. 계좌생성  2. 계좌목록  3. 예금  4. 출금  5. 종료");
-			System.out.println("===========================");
-			System.out.println("선택 > ");
-
+			System.out.println("========================================");
+			System.out.println("선택 >> ");
 			int selectNO = sc.nextInt();
+			sc.nextLine();
 
 			if (selectNO == 1) {
 				createAccount();
 			} else if (selectNO == 2) {
 				accountList();
 			} else if (selectNO == 3) {
-				deposit();
+//				deposit();
 			} else if (selectNO == 4) {
 				withraw();
 			} else if (selectNO == 5) {
@@ -39,62 +39,43 @@ public class BankApplication {
 	}
 
 	private static void deposit() {
-		// TODO Auto-generated method stub
 		System.out.println("========");
-		System.out.println("예금");
+		System.out.println("입금");
 		System.out.println("========");
 		System.out.println("계좌번호");
-		String ano = sc.next();
+		String ano = sc.nextLine();
 		System.out.println("예금액: ");
 		int money = sc.nextInt();
-
-		Account account = findAccount(ano)
-
-	private static Account findAccount(String ano) {
-		Account acount = null;
-		for(int = i; i < accountArray.length; i ++) {
-			if(accountArray[i] != null) {
-				Strint dbAno = accaunt
+		Account account = findAccount(ano);
 			}
-		}
+	private static Account findAccount(String ano) {
+		return null;
 	}
 
 	private static void accountList() {
-		// TODO Auto-generated method stub
-		System.out.println("========");
+		System.out.println("======");
 		System.out.println("계좌목록");
-		System.out.println("========");
-
-		for (int i = 0; i < accountArray.length; i++) {
-			Account account = accountArray[i];
+		System.out.println("======");
+		for (Account account : accountArray) {
 			if (account != null) {
-				System.out.println(account.getAno());
-				System.out.println("  ");
-				System.out.println(account.getOwner());
-				System.out.println("   ");
-				System.out.println(account.getBalance());
-				System.out.println();
+				System.out.println(account);
 			}
 		}
 
 	}
 
 	private static void createAccount() {
-		System.out.println("========");
+		System.out.println("======");
 		System.out.println("계좌생성");
-		System.out.println("========");
-
+		System.out.println("======");
+		System.out.println("");
 		System.out.println("계좌번호: ");
-		String ano = sc.next();
-
+		String ano = sc.nextLine();
 		System.out.println("계좌주: ");
-		String owner = sc.next();
-
+		String owner = sc.nextLine();
 		System.out.println("예금잔액: ");
 		int balance = sc.nextInt();
-
 		Account newAccount = new Account(ano, owner, balance);
-
 		for (int i = 0; i < accountArray.length; i++) {
 			if (accountArray[i] == null) {
 				accountArray[i] = newAccount;
