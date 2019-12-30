@@ -28,7 +28,7 @@ public class ComFriend extends Friend {//자식클래스2
 
 	@Override
 	public String toString() {
-		return "ComFriend [이름=" + getName() + ", 번호=" + getPhone() + ", 회사=" + company + ", 부서=" + dept + "]";
+		return "회사친구 >>>> 이름=" + getName() + ", 번호=" + getPhone() + ", 회사=" + company + ", 부서=" + dept ;
 	}
 
 	@Override

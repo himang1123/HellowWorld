@@ -14,7 +14,8 @@ public class Hello {
 		//System.out.println("Hello, World"); // 화면출력 int a =30
     	int publicInfo = 10; 
     	char age = 65;//66은 B가 나온다
-    	System.out.println("내 나이는 " + age); 
+    	System.out.println("내 나이는 \r ㅇ널님아러;ㅣㅁ   " + age);
+    	
     }
         
 }
