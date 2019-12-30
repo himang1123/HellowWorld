@@ -47,23 +47,20 @@ public class FriendExe {
 ////		System.out.println("프로그램 종료");
 //	}
 
-//	private static void nameSearch() {
-//		System.out.println("이름 입력: ");
-//		String name = sc.nextLine();
-//		System.out.println("입금 금액 입력: ");
-//		int amount = sc.nextInt();
-//		Account accnt = findAccount(ano);
-//		int balance = accnt.getBalance();// 현 잔고
-//		accnt.setBalance(balance + amount);
-//	}
-//
-//	static Account findAccount(String ano) {
-//		Account accnt = null;
-//		for (Account acnt : accountArray) {
-//			if (acnt != null) { // null 여부 체크
-//				if (ano.equals(acnt.getAno())) {
-//					accnt = acnt;
-//					break;
+	private static void nameSearch() {
+		System.out.println("이름 입력: ");
+		String name = sc.nextLine();
+		Friend names = findAccount(name);
+		accnt.setBalance(balance + amount);
+	}
+
+	static Account findAccount(String ano) {
+		Account accnt = null;
+		for (Account acnt : accountArray) {
+			if (acnt != null) { // null 여부 체크
+				if (ano.equals(acnt.getAno())) {
+					accnt = acnt;
+					break;
 //				}
 //			}
 //		}
@@ -160,28 +157,5 @@ public class FriendExe {
 //		return accnt;
 //	}
 //
-//	static void accountList() {
-//		for (Account acnt : accountArray) {
-//			if (acnt != null) {
-//				System.out.println(acnt);
-//			}
-//		}
-//	}
-//
-//	static void createAccount() {
-//		System.out.println("계좌번호 입력: ");
-//		String ano = sc.nextLine();
-//		System.out.println("사용자 입력: ");
-//		String owner = sc.nextLine();
-//		System.out.println("금액입력 : ");
-//		int balance = sc.nextInt();
-//		Account acnt = new Account(ano, owner, balance);
-//		for (int i = 0; i < accountArray.length; i++) {
-//			if (accountArray[i] == null) {
-//				accountArray[i] = acnt;
-//				break;
-//			}
-//		}
-//	}
 
 }

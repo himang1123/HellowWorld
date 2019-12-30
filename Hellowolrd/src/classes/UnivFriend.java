@@ -1,6 +1,6 @@
 package classes;
 
-public class UnivFriend extends Friend { //자식클래스1
+public class UnivFriend extends Friend { // 자식클래스1
 	private String univ;
 	private String major;
 
@@ -28,7 +28,7 @@ public class UnivFriend extends Friend { //자식클래스1
 
 	@Override
 	public String toString() {
-		return "UnivFriend [학교=" + univ + ", 학과=" + major + "]";
+		return "UnivFriend [이름=" + getName() + ", 번호=" + getPhone() + ", 학교=" + univ + ", 학과=" + major + "]";
 	}
 
 	@Override
