@@ -28,7 +28,7 @@ public class UnivFriend extends Friend { //자식클래스1
 
 	@Override
 	public String toString() {
-		return "UnivFriend [univ=" + univ + ", major=" + major + "]";
+		return "UnivFriend [학교=" + univ + ", 학과=" + major + "]";
 	}
 
 	@Override
