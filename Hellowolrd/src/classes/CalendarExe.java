@@ -16,8 +16,7 @@ public class CalendarExe {
 			System.out.print(" " + weeks[a]);
 		}
 
-		for (int i = 1; i < getMaxDate(month); i++) {
-			System.out.print(i + "  ");
+		for (int i = 1; i <= getMaxDate(month); i++) {
 			System.out.printf("%4d", i);
 			if (i + spaceCnt % 7 == 0) {
 				System.out.println();
@@ -28,9 +27,7 @@ public class CalendarExe {
 		System.out.println(" ============================");
 
 		// 7일단위로 출력
-
 	}
-
 	public static int getFirstDayofMonth(int month) {
 		int result = 0;
 		if (month == 9) {

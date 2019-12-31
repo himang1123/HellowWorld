@@ -18,5 +18,10 @@ public class CalendarExe {
 
 	public static void createCal(int year, int month) {
 		// 원하는 년도의 월을 입력하면 달력이 나오게 매소드를 설정하시오.
+		Calendar cal = Calendar.getInstance();
+		
+		int months = month + 1;
+		cal.set(year, month, 1);
+		
 	}
 }
