@@ -3,7 +3,7 @@ package classes;
 public class UnivFriend extends Friend { // 자식클래스1
 	private String univ;
 	private String major;
-
+	public UnivFriend() {}
 	public UnivFriend(String name, String phone, String univ, String major) {
 		super(name, phone);
 		this.univ = univ;

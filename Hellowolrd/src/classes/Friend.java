@@ -3,7 +3,8 @@ package classes;
 public class Friend {// 부모클래스
 	private String name;
 	private String phone;
-
+	
+	public Friend() {}
 	public Friend(String name, String phone) {
 		super();
 		this.name = name;
