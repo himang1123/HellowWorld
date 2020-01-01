@@ -3,31 +3,25 @@ package classes;
 public class CalendarExe {
 	public static void main(String[] args) {
 		int month = 11;
+		System.out.println("=============(" + month + "월)============");
+		String[] weeks = { "Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat" };
+		for (int i = 0; i < weeks.length; i++) {
+			System.out.print(" " + weeks[i]);
+		}
+		System.out.println();
+		System.out.println("===============================");
 		int spaceCnt = 0;
 		for (int i = 1; i < getFirstDayofMonth(month); i++) {
-			System.out.println("    ");
+			System.out.print("    ");
 			spaceCnt++;
 		}
-		System.out.println(getFirstDayofMonth(month));
-		System.out.println(" =============(" + month + ")===========");
-		String[] weeks = { "sun", "mon", "tue", "wen", "thr", "Fri", "sat" };
-
-		for (int a = 0; a < weeks.length; a++) {
-			System.out.print(" " + weeks[a]);
-		}
-
-		for (int i = 1; i <= getMaxDate(month); i++) {
+		for (int i = 1; i < getMaxDate(month); i++) {
 			System.out.printf("%4d", i);
-			if (i + spaceCnt % 7 == 0) {
+			if ((i + spaceCnt) % 7 == 0)
 				System.out.println();
-			}
 		}
-
-		System.out.println();
-		System.out.println(" ============================");
-
-		// 7일단위로 출력
 	}
+
 	public static int getFirstDayofMonth(int month) {
 		int result = 0;
 		if (month == 9) {
@@ -47,14 +41,12 @@ public class CalendarExe {
 		if (month <= 7) {
 			if (month % 2 == 1) {
 				dayCnt = 31;
+			} else if (month == 2) {
+				dayCnt = 28;
 			} else {
-				if (month == 2) {
-					dayCnt = 28;
-				} else {
-					dayCnt = 30;
-				}
+				dayCnt = 30;
 			}
-		} else if (7 < month) {
+		} else {
 			if (month % 2 == 0) {
 				dayCnt = 31;
 			} else {
